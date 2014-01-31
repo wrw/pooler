@@ -1,6 +1,6 @@
 .PHONY: all compile test dialyzer clean distclean doc
 
-all: compile test dialyzer
+all: compile test
 	@rebar compile
 
 compile:
