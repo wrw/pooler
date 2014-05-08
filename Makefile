@@ -24,7 +24,7 @@ endif
 
 .PHONY: all compile test dialyzer clean distclean doc
 
-all: compile test dialyzer
+all: compile test
 
 REBAR_URL=https://github.com/rebar/rebar/wiki/rebar
 $(REBAR):
@@ -47,7 +47,7 @@ ct: compile clean-common-test-data
 	-dir $(CURDIR)/test/ \
 	-cover cover.spec
 
-test: compile dialyzer eunit ct
+test: compile eunit ct
 
 $(DEPS_PLT): compile
 	@echo Building local erts plt at $(DEPS_PLT)
