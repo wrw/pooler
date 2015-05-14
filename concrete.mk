@@ -49,6 +49,7 @@ endif
 ifneq ($(SKIP_DIALYZER),)
 DIALYZER = echo "SKIPPING dialyzer"
 endif
+DIALYZER = echo "SKIPPING dialyzer"
 
 REBAR_URL=https://github.com/rebar/rebar/wiki/rebar
 
